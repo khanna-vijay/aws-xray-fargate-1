@@ -8,6 +8,8 @@ echo $Project_Name
 cluster_name=${Project_Name}-cluster; echo $cluster_name
 aws ecs create-cluster --cluster-name $cluster_name --region us-east-1
 
+sudo yum -y install jq gettext
+
 cd ~/environment
 git clone https://github.com/vijay-khanna/aws-xray-fargate.git
 cd aws-xray-fargate/src
